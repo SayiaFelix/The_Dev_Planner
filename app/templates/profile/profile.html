@@ -1,0 +1,44 @@
+{% extends 'base.html'%} {% block content %} {% if user == current_user %} {% endif %}
+<br>
+<br>
+<hr>
+<div class="container shadow-lg p-3 mb-4 bg-body rounded" style="background-color: #e7e6e3;">
+    <div class="row">
+        <!-- displaying  Username-->
+        <div class="col-md-4">
+            <h2>Author: <strong>{{user.author| capitalize}}</strong></h2>
+            <hr>
+            <button type="button" class="btn btn-secondary btn-lg"> <a href="{{url_for('main.update_profile',uname=user.author)}}"></a>Edit Profile::</button>
+
+            <!--Displaying user bio-->
+            {% if user.bio %}
+            <br>
+            <h4>{{user.bio}}</h4>
+            {%else%}
+            <br>
+            <p> <strong>{{user.author| capitalize}}</strong> add your bio. </p>
+            {% endif %}
+        </div>
+
+        <!--Display profile photo-->
+        <div class="col-md-8">
+            {% if user.profile_pic_path %}
+            <div class="card">
+                <img class="card" src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail" height=50%>
+            </div>
+            <div class="row">
+                {%else%}
+                <h3><strong>Add profile picture.</strong></h3>
+
+                {% endif %} {% if user == current_user %}
+                <form action="{{url_for('main.update_pic',uname=user.author)}}" method="post" enctype="multipart/form-data">
+                    <br>
+                    <input type="file" name="photo" class="form-control" required>
+                    <br>
+                    <button type="submit" class="btn btn-outline-secondary btn-lg"> :: Upload ::</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <hr> {% endblock %}

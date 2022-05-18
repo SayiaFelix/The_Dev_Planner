@@ -19,7 +19,7 @@ rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
 rel="stylesheet"
 />
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="{{url_for('static', filename='css/Dashboard.css')}}">
     <title>Dashboard</title>
 </head>
 <body>
@@ -35,8 +35,8 @@ rel="stylesheet"
 
 <div class="col-md-3 text-center  ">
 <div class="col container area1 mt-4 ">
-    <div class="row "><img class="img-fluid m-4 " src="./assets/logo.png" alt="" style="height: 100%; width:85%;"></div>
-    <div class="row mt-3 profile"><img class="img-fluid user1 rounded-circle" src="./assets/user.jpg" alt=""></div>
+    <div class="row "><img class="img-fluid m-4 " src="{{url_for('static', filename='assets/logo.png')}}" alt="" style="height: 100%; width:85%;"></div>
+    <div class="row mt-3 profile"><img class="img-fluid user1 rounded-circle" src="{{url_for('static', filename='assets/user.jpg')}}" alt=""></div>
       
     <div class="row"><h5 class="text-center fw-bold mt-2">Joyce Njoroge</h5></div>
     <div class="row "><p>joycej@protonmail.ch</p></div>

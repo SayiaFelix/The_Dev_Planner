@@ -17,6 +17,14 @@ def index():
     title= "The Dev Planner Hub ::"
     return render_template('index.html',title=title)
 
+@main.route('/dashboard')
+def dashboard():
+    '''
+    return              
+    '''
+  
+    title= "Dashboard ::"
+    return render_template('Dashboard.html',title=title)
 
 @main.route('/subscribe', methods=['GET','POST'])
 def subscriber():

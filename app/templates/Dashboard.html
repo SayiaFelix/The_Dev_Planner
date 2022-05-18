@@ -1,62 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-rel="stylesheet"
-/>
-<!-- MDB -->
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
-rel="stylesheet"
-/>
-<link rel="stylesheet" href="{{url_for('static', filename='css/Dashboard.css')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Dashboard.css')}}">
     <title>Dashboard</title>
 </head>
+
 <body>
     <div class="backg">
-<div class="container-fluid mainArea ">
-<div class="row">
+        <div class="container-fluid mainArea ">
+            <div class="row">
+                <div class="col-md-3 text-center  ">
+                    <div class="col container area1 mt-4 ">
+                        <div class="row "><img class="img-fluid m-4 " src="{{url_for('static', filename='assets/logo.png')}}" alt="" style="height: 100%; width:85%;"></div>
+                        <div class="row mt-3 profile"><img class="img-fluid user1 rounded-circle" src="{{url_for('static', filename='assets/user.jpg')}}" alt=""></div>
 
-
-
-
-
-
-
-<div class="col-md-3 text-center  ">
-<div class="col container area1 mt-4 ">
-    <div class="row "><img class="img-fluid m-4 " src="{{url_for('static', filename='assets/logo.png')}}" alt="" style="height: 100%; width:85%;"></div>
-    <div class="row mt-3 profile"><img class="img-fluid user1 rounded-circle" src="{{url_for('static', filename='assets/user.jpg')}}" alt=""></div>
-      
-    <div class="row"><h5 class="text-center fw-bold mt-2">Joyce Njoroge</h5></div>
-    <div class="row "><p>joycej@protonmail.ch</p></div>
-    <div class="row mt-4">
-             <!-- Tab navs -->
-      <div
-      class="nav flex-column nav-tabs text-center"
-      id="v-tabs-tab"
-      role="tablist"
-      aria-orientation="vertical"
-    >
-      <a
-        class="nav-link active  mt-2"
-        id="v-tabs-home-tab"
-        data-mdb-toggle="tab"
-        href="#v-tabs-home"
-        role="tab"
-        aria-controls="v-tabs-home"
-        aria-selected="true"
-        >Dashboard</a
+                        <div class="row">
+                            <h5 class="text-center fw-bold mt-2">Joyce Njoroge</h5>
+                        </div>
+                        <div class="row ">
+                            <p>joycej@protonmail.ch</p>
+                        </div>
+                        <div class="row mt-4">
+                            <!-- Tab navs -->
+                            <div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active  mt-2" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-home" role="tab" aria-controls="v-tabs-home" aria-selected="true">Dashboard</a
       >
       <a
         class="nav-link mt-1"
@@ -133,639 +110,643 @@ rel="stylesheet"
                    
                     <div class="card-body">
                       <h6 class="card-title text-white fw-bold mt-3">Web Development</h6>
-                      <p class="card-text text-white"><small><a href="" class="text-white fw-bold"> FreeCodeCamp</a></small></p>
-                    </div>
-                  </div>
-            </div>
-            <div class="col">
-
-                <div class="card text-white  " style="max-width: 15rem; height: 10rem; background-color:#95d0d4;">
-                   
-                    <div class="card-body">
-                      <h6 class="card-title text-white fw-bold mt-3">Data Structures And Algorithms</h6>
-                      <p class="card-text text-white"><small><a href="" class="text-white fw-bold"> Havard CS50</a></small></p>
-                    </div>
-                  </div>
-
-            </div>
-            <div class="col">
-
-                <div class="card text-white  " style="max-width: 15rem; height: 10rem; background-color:#fd7e51;">
-                   
-                    <div class="card-body">
-                      <h6 class="card-title text-white fw-bold mt-3">Python Programming Foundations</h6>
-                      <p class="card-text text-white"><small><a href="" class="text-white fw-bold"> ALX-T & Udacity</a></small></p>
-                    </div>
-                  </div>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <h6 class="mt-3 fw-bold">Tasks for today</h6>
-                <div class="card  taskcards" style="height: 5rem;">
-                    <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                        <small class="fw-bold">Data Structures</small>
-                    </div>
-                    <div class="col">
-                        <input type="checkbox" id="test" name="test" value="test">
-                    </div>
-                </div>
-                <div class="row">
-                    <small><p>ALX-T</p></small>
-                </div>
-                </div>
-                  </div>
-
-                  <div class="card  taskcards mt-1" style="height: 5rem;">
-                    <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                        <small class="fw-bold">IP Submission</small>
-                    </div>
-                    <div class="col">
-                        <input type="checkbox" id="test" name="test" value="test">
-                    </div>
-                </div>
-                <div class="row">
-                    <p>Heroku</p>
-                </div>
-                </div>
-                  </div>
-                  <div class="card  taskcards mt-2" style="height: 5rem;">
-                    <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                        <small class="fw-bold">Pro Development</small>
-                    </div>
-                    <div class="col">
-                        <input type="checkbox" id="test" name="test" value="test">
-                    </div>
-                </div>
-                <div class="row">
-                    <p>Test</p>
-                </div>
-                </div>
-                  </div>
-
-            </div>
-
-
-
-            <div class="col mt-4">
-<!-- Premium plan card section starts here -->
-
-                <div class="card cardpremium" style="height:10rem ;" >
-                    <div class="row">
-                        <div class="col">
-                            <h6 class="text-center mt-2  d.flex align-self-center"><br><span class="mt-3">Jisort na Premium</span>  <br> <br> <span class="fw-bold">Kshs 500/- p.m</span> <br><br><span> and get multi device compatibility </span></h6>
+                      <p class="card-text text-white"><small><a href="" class="text-white fw-bold"> FreeCodeCamp</a></small>
+                                </p>
+                            </div>
                         </div>
-                        <div class="col"><img src="./assets/undraw_Web_devices_re_m8sc.png" alt="" class="img-fluid" style="height:10rem; width:auto;" ></div>
-                        
+                    </div>
+                    <div class="col">
+
+                        <div class="card text-white  " style="max-width: 15rem; height: 10rem; background-color:#95d0d4;">
+
+                            <div class="card-body">
+                                <h6 class="card-title text-white fw-bold mt-3">Data Structures And Algorithms</h6>
+                                <p class="card-text text-white"><small><a href="" class="text-white fw-bold"> Havard CS50</a></small></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col">
+
+                        <div class="card text-white  " style="max-width: 15rem; height: 10rem; background-color:#fd7e51;">
+
+                            <div class="card-body">
+                                <h6 class="card-title text-white fw-bold mt-3">Python Programming Foundations</h6>
+                                <p class="card-text text-white"><small><a href="" class="text-white fw-bold"> ALX-T & Udacity</a></small></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h6 class="mt-3 fw-bold">Tasks for today</h6>
+                        <div class="card  taskcards" style="height: 5rem;">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col">
+                                        <small class="fw-bold">Data Structures</small>
+                                    </div>
+                                    <div class="col">
+                                        <input type="checkbox" id="test" name="test" value="test">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <small><p>ALX-T</p></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  taskcards mt-1" style="height: 5rem;">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col">
+                                        <small class="fw-bold">IP Submission</small>
+                                    </div>
+                                    <div class="col">
+                                        <input type="checkbox" id="test" name="test" value="test">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p>Heroku</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card  taskcards mt-2" style="height: 5rem;">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col">
+                                        <small class="fw-bold">Pro Development</small>
+                                    </div>
+                                    <div class="col">
+                                        <input type="checkbox" id="test" name="test" value="test">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p>Test</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col mt-4">
+                        <!-- Premium plan card section starts here -->
+
+                        <div class="card cardpremium" style="height:10rem ;">
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="text-center mt-2  d.flex align-self-center"><br><span class="mt-3">Jisort na Premium</span> <br> <br> <span class="fw-bold">Kshs 500/- p.m</span> <br><br><span> and get multi device compatibility </span></h6>
+                                </div>
+                                <div class="col"><img src="./assets/undraw_Web_devices_re_m8sc.png" alt="" class="img-fluid" style="height:10rem; width:auto;"></div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Premium plan card section ends here -->
                     </div>
                 </div>
 
 
-<!-- Premium plan card section ends here -->
+
+                <!-- Dashboard Area  -->
             </div>
-        </div>
 
 
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <!-- weekly tasks section starts here -->
 
-        <!-- Dashboard Area  -->
-        </div>
-
-
-<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<!-- weekly tasks section starts here -->
-
-        <div
-          class="tab-pane fade "
-          id="v-tabs-profile"
-          role="tabpanel"
-          aria-labelledby="v-tabs-profile-tab"
-        >
-        <div class="row mt-5 d-flex ">
-            <div class="col mt-2 ">
-                <h4 class="fw-bold">Dev Weekly Planner</h4>
-                <p class="mt-4 text-muted"><small > Dev weekly Planner helps you plan your week well. Add all tasks you'd love to achieve in your week!</small></p>
-            </div>
-            <div class="col">
-                <button class="button-40" role="button"><small class="text-white" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop"> Add Weekly Task</small></button>
-            </div>
-        </div>
-
-        <!-- weekdays tabs -->
-        <div class="container">
-            <!-- Tabs navs -->
-<ul class="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
-    <li class="nav-item" role="presentation">
-      <a class="nav-link active" id="ex-with-icons-tab-1" data-mdb-toggle="tab" href="#ex-with-icons-tabs-1" role="tab"
-        aria-controls="ex-with-icons-tabs-1" aria-selected="true"><i class="fas fa-chart-pie fa-fw me-2"></i>Mon</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="ex-with-icons-tab-2" data-mdb-toggle="tab" href="#ex-with-icons-tabs-2" role="tab"
-        aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i class="fas fa-chart-line fa-fw me-2"></i>Tue</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="ex-with-icons-tab-3" data-mdb-toggle="tab" href="#ex-with-icons-tabs-3" role="tab"
-        aria-controls="ex-with-icons-tabs-3" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Wed</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ex-with-icons-tab-4" data-mdb-toggle="tab" href="#ex-with-icons-tabs-4" role="tab"
-          aria-controls="ex-with-icons-tabs-4" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Thur</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ex-with-icons-tab-5" data-mdb-toggle="tab" href="#ex-with-icons-tabs-5" role="tab"
-          aria-controls="ex-with-icons-tabs-5" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Fri</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ex-with-icons-tab-6" data-mdb-toggle="tab" href="#ex-with-icons-tabs-6" role="tab"
-          aria-controls="ex-with-icons-tabs-6" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Sat</a>
-      </li>
-     
-  </ul>
-  <!-- Tabs navs -->
-  
-  <!-- Tabs content -->
-  <div class="tab-content" id="ex-with-icons-content">
-    <div class="tab-pane fade show active" id="ex-with-icons-tabs-1" role="tabpanel" aria-labelledby="ex-with-icons-tab-1">
-   <h6>   Monday tasks</h6>
-   <div class="col">
-    
-    <div class="card  taskcards1" style="height: 6rem;">
-        <div class="card-body"><div class="row d-flex justify-content-between">
-            <div class="col">
-                <small class="fw-bold">Data Structures and Algorithms</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-    </div>
-    <div class="row">
-        <p>ALX-T & Udacity Scholarship</p>
-    </div>
-    </div>
-      </div>
-
-      <div class="card  taskcards1 mt-2" style="height: 6rem;">
-        <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-            <small class="fw-bold">Project Submission</small>
-        </div>
-        <div class="col">
-            <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-        </div>
-    </div>
-    <div class="row">
-        <p>Github</p>
-    </div>
-    </div>
-      </div>
-      <div class="card  taskcards1 mt-2" style="height: 6rem;">
-        <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-            <small class="fw-bold">Professional Development</small>
-        </div>
-        <div class="col">
-            <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-        </div>
-    </div>
-    <div class="row">
-        <p>Communicating for impact</p>
-    </div>
-    </div>
-      </div>
-
-</div>
-
-        
-
-    </div>
-    <div class="tab-pane fade" id="ex-with-icons-tabs-2" role="tabpanel" aria-labelledby="ex-with-icons-tab-2">
-    <h6>  Tuesday tasks</h6>
-
-    <div class="col">
-    
-        <div class="card  taskcards2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between">
-                <div class="col">
-                    <small class="fw-bold">Data Structures and Algorithms</small>
+            <div class="tab-pane fade " id="v-tabs-profile" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+                <div class="row mt-5 d-flex ">
+                    <div class="col mt-2 ">
+                        <h4 class="fw-bold">Dev Weekly Planner</h4>
+                        <p class="mt-4 text-muted"><small> Dev weekly Planner helps you plan your week well. Add all tasks you'd love to achieve in your week!</small></p>
+                    </div>
+                    <div class="col">
+                        <button class="button-40" role="button"><small class="text-white" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop"> Add Weekly Task</small></button>
+                    </div>
                 </div>
-                <div class="col">
-                    <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+
+                <!-- weekdays tabs -->
+                <div class="container">
+                    <!-- Tabs navs -->
+                    <ul class="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="ex-with-icons-tab-1" data-mdb-toggle="tab" href="#ex-with-icons-tabs-1" role="tab" aria-controls="ex-with-icons-tabs-1" aria-selected="true"><i class="fas fa-chart-pie fa-fw me-2"></i>Mon</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="ex-with-icons-tab-2" data-mdb-toggle="tab" href="#ex-with-icons-tabs-2" role="tab" aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i class="fas fa-chart-line fa-fw me-2"></i>Tue</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="ex-with-icons-tab-3" data-mdb-toggle="tab" href="#ex-with-icons-tabs-3" role="tab" aria-controls="ex-with-icons-tabs-3" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Wed</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="ex-with-icons-tab-4" data-mdb-toggle="tab" href="#ex-with-icons-tabs-4" role="tab" aria-controls="ex-with-icons-tabs-4" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Thur</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="ex-with-icons-tab-5" data-mdb-toggle="tab" href="#ex-with-icons-tabs-5" role="tab" aria-controls="ex-with-icons-tabs-5" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Fri</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="ex-with-icons-tab-6" data-mdb-toggle="tab" href="#ex-with-icons-tabs-6" role="tab" aria-controls="ex-with-icons-tabs-6" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Sat</a>
+                        </li>
+
+                    </ul>
+                    <!-- Tabs navs -->
+
+                    <!-- Tabs content -->
+                    <div class="tab-content" id="ex-with-icons-content">
+                        <div class="tab-pane fade show active" id="ex-with-icons-tabs-1" role="tabpanel" aria-labelledby="ex-with-icons-tab-1">
+                            <h6> Monday tasks</h6>
+                            <div class="col">
+
+                                <div class="card  taskcards1" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Data Structures and Algorithms</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>ALX-T & Udacity Scholarship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card  taskcards1 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Project Submission</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Github</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card  taskcards1 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Professional Development</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Communicating for impact</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="tab-pane fade" id="ex-with-icons-tabs-2" role="tabpanel" aria-labelledby="ex-with-icons-tab-2">
+                            <h6> Tuesday tasks</h6>
+
+                            <div class="col">
+
+                                <div class="card  taskcards2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Data Structures and Algorithms</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>ALX-T & Udacity Scholarship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card  taskcards2 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Project Submission</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Github</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card  taskcards2 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Professional Development</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Communicating for impact</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane fade" id="ex-with-icons-tabs-3" role="tabpanel" aria-labelledby="ex-with-icons-tab-3">
+                            <h6>Wednesday tasks</h6>
+                            <div class="col">
+
+                                <div class="card  taskcards4" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Data Structures and Algorithms</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>ALX-T & Udacity Scholarship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card  taskcards4 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Project Submission</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Github</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card  taskcards4 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Professional Development</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Communicating for impact</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="ex-with-icons-tabs-4" role="tabpanel" aria-labelledby="ex-with-icons-tab-4">
+                            <h6> Thursday tasks</h6>
+                            <div class="col">
+
+                                <div class="card  taskcards5" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Data Structures and Algorithms</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>ALX-T & Udacity Scholarship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card  taskcards5 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Project Submission</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Github</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card  taskcards5 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Professional Development</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Communicating for impact</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="tab-pane fade" id="ex-with-icons-tabs-5" role="tabpanel" aria-labelledby="ex-with-icons-tab-5">
+                            <h6> Friday tasks</h6>
+                            <div class="col">
+
+                                <div class="card  taskcards6" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Data Structures and Algorithms</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>ALX-T & Udacity Scholarship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card  taskcards6 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Project Submission</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Github</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card  taskcards6 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Professional Development</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Communicating for impact</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tab-pane fade" id="ex-with-icons-tabs-6" role="tabpanel" aria-labelledby="ex-with-icons-tab-6">
+                            <h6> Saturday tasks</h6>
+                            <div class="col">
+
+                                <div class="card  taskcards3" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Data Structures and Algorithms</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>ALX-T & Udacity Scholarship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card  taskcards3 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Project Submission</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Github</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card  taskcards3 mt-2" style="height: 6rem;">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col">
+                                                <small class="fw-bold">Professional Development</small>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p>Communicating for impact</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabs content -->
                 </div>
-        </div>
-        <div class="row">
-            <p>ALX-T & Udacity Scholarship</p>
-        </div>
-        </div>
-          </div>
-    
-          <div class="card  taskcards2 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Project Submission</small>
+
+
             </div>
+            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <!-- Weekly tasks section ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel" aria-labelledby="v-tabs-messages-tab">
+                resources
+            </div>
+
+            <div class="tab-pane fade" id="v-tabs-profile" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+                profile
+            </div>
+
+            <div class="tab-pane fade" id="v-tabs-settings" role="tabpanel" aria-labelledby="v-tabs-settings-tab">
+                settings
+            </div>
+            <!-- Tab content -->
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="col-md-2 area3">
+
+        <small><h6 class="mt-5 fw-bold mb-5"><u> Dev Calendar</u></h6></small>
+
+        <small><p class="fw-bold mt-4 ">Upcoming events</p></small>
+
+        <small class="text-muted">May 2022</small>
+        <div class="taskcards m-2 mt-4 " style="height: 3rem;">
             <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                <small class="fw-bold m-2">PyConKE</small><br>
+                <small class="m-2">USIU </small>
             </div>
         </div>
-        <div class="row">
-            <p>Github</p>
-        </div>
-        </div>
-          </div>
-          <div class="card  taskcards2 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Professional Development</small>
-            </div>
+
+        <div class="taskcards taskcards1 m-2 mt-3" style="height: rem;">
             <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
+                <small class="fw-bold m-2">Data Analysis </small><br><small class="m-2 mb-5">Upskill, Nairobi</small>
             </div>
         </div>
-        <div class="row">
-            <p>Communicating for impact</p>
+
+        <small class="text-muted mt-5">June 2022</small>
+
+        <div class="taskcards taskcards2 m-2 mt-4" style="height: rem;">
+            <div class="col">
+                <small class="fw-bold m-2">Google I/O </small><br><small class="m-2 mb-5">USIU, Nairobi</small>
+            </div>
         </div>
+
+        <div class="taskcards taskcards1 m-2 mt-4" style="height: rem;">
+            <div class="col">
+                <small class="fw-bold m-2">Mobile Data ODK </small><br><small class="m-2 mb-5">Upskill, Nairobi</small>
+            </div>
         </div>
-          </div>
-    
+
+        <small class="text-muted mt-5">July 2022</small>
+
+        <div class="taskcards taskcards2 m-2 mt-4" style="height: rem;">
+            <div class="col">
+                <small class="fw-bold m-2">Moringa Bootcamp </small><br><small class="m-2 mb-5">Ngong lane Plaza</small>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
     </div>
 
 
-    </div>
-    <div class="tab-pane fade" id="ex-with-icons-tabs-3" role="tabpanel" aria-labelledby="ex-with-icons-tab-3">
-      <h6>Wednesday tasks</h6>
-      <div class="col">
-    
-        <div class="card  taskcards4" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between">
-                <div class="col">
-                    <small class="fw-bold">Data Structures and Algorithms</small>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="staticBackdropLabel">New Task</h6>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col">
-                    <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-                </div>
-        </div>
-        <div class="row">
-            <p>ALX-T & Udacity Scholarship</p>
-        </div>
-        </div>
-          </div>
-    
-          <div class="card  taskcards4 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Project Submission</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Github</p>
-        </div>
-        </div>
-          </div>
-          <div class="card  taskcards4 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Professional Development</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Communicating for impact</p>
-        </div>
-        </div>
-          </div>
-    
-    </div>
-    </div>
-    <div class="tab-pane fade" id="ex-with-icons-tabs-4" role="tabpanel" aria-labelledby="ex-with-icons-tab-4">
-       <h6> Thursday tasks</h6>
-       <div class="col">
-    
-        <div class="card  taskcards5" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between">
-                <div class="col">
-                    <small class="fw-bold">Data Structures and Algorithms</small>
-                </div>
-                <div class="col">
-                    <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-                </div>
-        </div>
-        <div class="row">
-            <p>ALX-T & Udacity Scholarship</p>
-        </div>
-        </div>
-          </div>
-    
-          <div class="card  taskcards5 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Project Submission</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Github</p>
-        </div>
-        </div>
-          </div>
-          <div class="card  taskcards5 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Professional Development</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Communicating for impact</p>
-        </div>
-        </div>
-          </div>
-    
-    </div>
-      </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form4Example1" class="form-control" />
+                            <label class="form-label" for="form4Example1">Task Name</label>
+                        </div>
 
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form4Example2" class="form-control" />
+                            <label class="form-label" for="form4Example2">Due Date</label>
+                        </div>
 
+                        <!-- Message input -->
+                        <div class="form-outline mb-4">
+                            <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                            <label class="form-label" for="form4Example3">Description</label>
+                        </div>
 
-
-      <div class="tab-pane fade" id="ex-with-icons-tabs-5" role="tabpanel" aria-labelledby="ex-with-icons-tab-5">
-     <h6>   Friday tasks</h6>
-     <div class="col">
-    
-        <div class="card  taskcards6" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between">
-                <div class="col">
-                    <small class="fw-bold">Data Structures and Algorithms</small>
-                </div>
-                <div class="col">
-                    <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-                </div>
-        </div>
-        <div class="row">
-            <p>ALX-T & Udacity Scholarship</p>
-        </div>
-        </div>
-          </div>
-    
-          <div class="card  taskcards6 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Project Submission</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Github</p>
-        </div>
-        </div>
-          </div>
-          <div class="card  taskcards6 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Professional Development</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Communicating for impact</p>
-        </div>
-        </div>
-          </div>
-    
-    </div>
-
-      </div>
-
-
-
-      <div class="tab-pane fade" id="ex-with-icons-tabs-6" role="tabpanel" aria-labelledby="ex-with-icons-tab-6">
-       <h6> Saturday tasks</h6>
-       <div class="col">
-    
-        <div class="card  taskcards3" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between">
-                <div class="col">
-                    <small class="fw-bold">Data Structures and Algorithms</small>
-                </div>
-                <div class="col">
-                    <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-                </div>
-        </div>
-        <div class="row">
-            <p>ALX-T & Udacity Scholarship</p>
-        </div>
-        </div>
-          </div>
-    
-          <div class="card  taskcards3 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Project Submission</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Github</p>
-        </div>
-        </div>
-          </div>
-          <div class="card  taskcards3 mt-2" style="height: 6rem;">
-            <div class="card-body"><div class="row d-flex justify-content-between"><div class="col">
-                <small class="fw-bold">Professional Development</small>
-            </div>
-            <div class="col">
-                <a href="#"><button class="button-70" role="button">Mark Done</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <p>Communicating for impact</p>
-        </div>
-        </div>
-          </div>
-    
-    </div>
-      </div>
-  </div>
-  <!-- Tabs content -->
-        </div>
-
-
-        </div>
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<!-- Weekly tasks section ends here -->
-
-
-
-
-
-
-
-
-
-
-
-
-        <div
-          class="tab-pane fade"
-          id="v-tabs-messages"
-          role="tabpanel"
-          aria-labelledby="v-tabs-messages-tab"
-        >
-        resources
-      </div>
-
-      <div
-          class="tab-pane fade"
-          id="v-tabs-profile"
-          role="tabpanel"
-          aria-labelledby="v-tabs-profile-tab"
-        >
-        profile
-      </div>
-
-      <div
-          class="tab-pane fade"
-          id="v-tabs-settings"
-          role="tabpanel"
-          aria-labelledby="v-tabs-settings-tab"
-        >
-        settings
-      </div>
-      <!-- Tab content -->
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-<div class="col-md-2 area3">
-    
-    <small><h6 class="mt-5 fw-bold mb-5"><u> Dev Calendar</u></h6></small>
-
-    <small><p class="fw-bold mt-4 ">Upcoming events</p></small>
-
-    <small class="text-muted">May 2022</small>
-    <div class="taskcards m-2 mt-4 " style="height: 3rem;">
-        <div class="col">
-            <small class="fw-bold m-2">PyConKE</small><br>
-            <small class="m-2">USIU </small>
-        </div>
-      </div>
-
-      <div class="taskcards taskcards1 m-2 mt-3" style="height: rem;">
-        <div class="col">
-            <small class="fw-bold m-2">Data Analysis </small><br><small class="m-2 mb-5">Upskill, Nairobi</small>
-        </div>
-      </div>
-
-      <small class="text-muted mt-5">June 2022</small>
-
-      <div class="taskcards taskcards2 m-2 mt-4" style="height: rem;">
-        <div class="col">
-            <small class="fw-bold m-2">Google I/O </small><br><small class="m-2 mb-5">USIU, Nairobi</small>
-        </div>
-      </div>
-
-      <div class="taskcards taskcards1 m-2 mt-4" style="height: rem;">
-        <div class="col">
-            <small class="fw-bold m-2">Mobile Data ODK </small><br><small class="m-2 mb-5">Upskill, Nairobi</small>
-        </div>
-      </div>
-
-      <small class="text-muted mt-5">July 2022</small>
-
-      <div class="taskcards taskcards2 m-2 mt-4" style="height: rem;">
-        <div class="col">
-            <small class="fw-bold m-2">Moringa Bootcamp </small><br><small class="m-2 mb-5">Ngong lane Plaza</small>
-        </div>
-      </div>
-
-
-</div>
-
-</div>
-</div>
-    
-
-
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="staticBackdrop"
-  data-mdb-backdrop="static"
-  data-mdb-keyboard="false"
-  tabindex="-1"
-  aria-labelledby="staticBackdropLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h6 class="modal-title" id="staticBackdropLabel">New Task</h6>
-        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body"><form>
-        <!-- Name input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="form4Example1" class="form-control" />
-          <label class="form-label" for="form4Example1">Task Name</label>
-        </div>
-      
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="form4Example2" class="form-control" />
-          <label class="form-label" for="form4Example2">Due Date</label>
-        </div>
-      
-        <!-- Message input -->
-        <div class="form-outline mb-4">
-          <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-          <label class="form-label" for="form4Example3">Description</label>
-        </div>
-      
-        <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
-          <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-          <label class="form-check-label" for="form4Example4">
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
+                            <label class="form-check-label" for="form4Example4">
             Track
           </label>
-        </div>
-      
-        <!-- Submit button -->
-        <div class="modal-footer"></div>
-        <button type="submit" class="text-center btn button-40" data-mdb-dismiss="modal">Add Task</button>
-    </div>
-      </form>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="modal-footer"></div>
+                        <button type="submit" class="text-center btn button-40" data-mdb-dismiss="modal">Add Task</button>
+                </div>
+                </form>
 
 
-      </div>
-      
-        <!-- <button type="button" class="button-40" >Add</button>
+            </div>
+
+            <!-- <button type="button" class="button-40" >Add</button>
         <button type="button" class="btn btn-primary"></button> -->
-      
+
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
 
 
@@ -781,12 +762,14 @@ rel="stylesheet"
 
 
 
-<!-- MDB -->
-<script src="./script.js"></script>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
-></script>
+    <!-- MDB -->
+    <script src="./script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
 
 </body>
+
+</html>
+
+</html>
+
 </html>

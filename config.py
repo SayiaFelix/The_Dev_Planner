@@ -2,7 +2,7 @@ import os
 
 class Config:
     SECRET_KEY=os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:devhub@localhost/devhub'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:jay@localhost/planner'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
     #  email configurations
@@ -29,7 +29,7 @@ class ProdConfig(Config):
   
   pass
 class TestConfig(Config):
-      SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:devhub@localhost/devhub_test'
+      SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:jay@localhost/devhub_test'
   
 
 class DevConfig(Config):
@@ -38,7 +38,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:devplanner@localhost/devhub'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:jay@localhost/planner'
  
 DEBUG = True
 

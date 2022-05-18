@@ -1,0 +1,25 @@
+{% extends 'base.html'%} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"> {% endblock %} {% block content %}
+
+<body style="background-color: #161510;">
+    <div class="jumbotron text-center" style="background-image: url('static/img/home-page.png')">
+        <h1 class="display-2 text-light"> The Dev Planner </h1><br>
+
+        <p class="lead font-weight-normal text-white"style="font-size:40px">Organize your work and life ,finally</p>
+        <p style="font-size:40px;color:white"> Be focused,organized and calm with this planner</p>
+        <div id="buttons d-block mx-auto">
+            <a class="btn btn-outline-secondary text-white" href=""style="font-size:40px"></a>
+            <a class="btn btn-outline-secondary text-white" href=""style="font-size:40px"></a>      
+        
+    <!-- footer -->
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-8 col-md-10 mx-auto ">
+                    <p class="copyright text-center m-2 medium text-dark ">Copyright &copy; The Dev Planner Hub</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock%}
+</body>

@@ -19,7 +19,7 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Author name is taken already.')
 
 class LoginForm(FlaskForm):
-    email = StringField('Email Address ::',validators=[DataRequired(),Email()])
-    password = PasswordField('Password ::',validators =[DataRequired()])
+    email = StringField('Email Address',validators=[DataRequired(),Email()])
+    password = PasswordField('Password',validators =[DataRequired()])
     remember = BooleanField('Remember me')
     submit = SubmitField('Sign In')

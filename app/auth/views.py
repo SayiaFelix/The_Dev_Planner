@@ -14,12 +14,9 @@ def login():
         if user is not None and user.verify_password(login_form.password.data):
             login_user(user,login_form.remember.data)
          
-            if user.is_admin:
-                return redirect(url_for('main.admin_dashboard'))
-            else:
-                return redirect(request.args.get('next') or url_for('main.index'))
+            return redirect(request.args.get('next') or url_for('main.index'))
         flash('Invalid author name or Password')
-    title = "SiR Feliz login"
+    title = "Login"
     return render_template('auth/login.html',login_form = login_form,title=title)
 
 @auth.route('/register',methods = ["GET","POST"])
@@ -37,7 +34,7 @@ def register():
 
         return redirect(url_for('auth.login'))
         
-    return render_template('auth/register.html',registration_form = form)
+    return render_template('auth/register.html',title=title,registration_form = form)
 
 @auth.route('/logout')
 @login_required

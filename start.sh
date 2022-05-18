@@ -1,5 +1,5 @@
 export SECRET_KEY='urwefh@kn'
-export MAIL_USERNAME='The Dev Planner ::'
+export MAIL_USERNAME='The Dev Planner '
 export MAIL_PASSWORD='Jaysafu@001'
 
 

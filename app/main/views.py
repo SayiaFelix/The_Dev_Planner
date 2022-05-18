@@ -18,7 +18,6 @@ def index():
     return render_template('index.html',title=title)
 
 
-
 @main.route('/subscribe', methods=['GET','POST'])
 def subscriber():
 
@@ -38,6 +37,4 @@ def subscriber():
         return render_template('index.html',title=title)
 
     
-  
-
     return render_template('subscribe.html',subscriber_form=subscriber_form)

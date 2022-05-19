@@ -18,6 +18,7 @@ def index():
     return render_template('index.html',title=title)
 
 @main.route('/dashboard')
+@login_required
 def dashboard():
     '''
     return              

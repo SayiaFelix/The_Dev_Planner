@@ -42,8 +42,8 @@
                 <!-- Left links -->
 
                 <div class="d-flex align-items-center">
-                    <button type="button" class="btn btn-link px-3 me-2">Login</button>
-                    <a href="#"><button class="button-29" role="button">
+                    <a href="{{url_for('auth.login')}}"><button type="button" class="btn btn-link px-3 me-2">Login</button></a>
+                    <a href="{{url_for('auth.register')}}"><button class="button-29" role="button">
                             SIGN UP FOR FREE
                         </button></a>
                 </div>
@@ -67,7 +67,7 @@
                             accomplish your tasks in a stylish way
                         </p>
                     </small>
-                    <a href="#"><button class="button-29" role="button">Learn More</button></a>
+                    <a href="{{url_for('auth.login')}}"><button class="button-29" role="button">Learn More</button></a>
                 </div>
                 <div class="col-md-8 mt-5">
                     <img class="img-fluid hero2 ml-auto" src="{{url_for('static', filename='assets/hero2.png')}}" alt="" />

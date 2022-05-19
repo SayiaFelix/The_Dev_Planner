@@ -1,12 +1,10 @@
 # The_Dev_Planner
-
-#### By 
+## By 
 * [Sayia Felix](https://github.com/SayiaFelix/)
 * Gamaliel Sirengo  
 * Caren Chepkorir 
 * Christine Nkatha
 * Joyce Njoroge
-
 
 ## Description
 This is a web application that helps developers plan out their day and keep track of their various tasks. The dev planner helps you keep track of your tasks and deadlines.Starting a bootcamp can be overwhelming,the dev planner has resources that can help you get started in your journey as a developer.
@@ -44,7 +42,7 @@ This is a web application that helps developers plan out their day and keep trac
 | Select profile| **Edit bio** |displays edited bio|
 
 
-### License
+## License
 *MIT LICENSE*
 Copyright (c) 2022 **The_Dev_Planner**
 

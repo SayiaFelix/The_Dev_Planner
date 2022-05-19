@@ -1,8 +1,10 @@
+from unicodedata import category
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
 from . import login_manager
-from datetime import datetime
+
+
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -39,7 +41,6 @@ class Task(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(255))
     description = db.Column(db.Text)
-    date = db.Column(db.DateTime(250), default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
 
@@ -53,7 +54,7 @@ class Task(db.Model):
         return task
 
     def __repr__(self):
-        return f"Task :: {self.id}',{self.name}',{self.description}','{self.date}')"
+        return f"Task :: {self.id}',{self.name}',{self.description}')"
 
   
 class WeeklyTask(db.Model):
@@ -61,9 +62,9 @@ class WeeklyTask(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(255))
     description = db.Column(db.Text)
-    date = db.Column(db.DateTime(250), default=datetime.utcnow)
+    category = db.Column(db.Text)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-  
+    
 
     def save_blog(self,task):
         db.session.add(task)
@@ -75,7 +76,7 @@ class WeeklyTask(db.Model):
         return task
 
     def __repr__(self):
-        return f"Weekly Task :: {self.id}',{self.name}',{self.description}','{self.date}')"
+        return f"Weekly Task :: {self.id}',{self.name}',{self.description}')"
 
 
 

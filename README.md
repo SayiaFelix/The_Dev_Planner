@@ -6,7 +6,8 @@
 * Caren Chepkorir 
 * Christine Nkatha
 * Joyce Njoroge
-* 
+
+
 ## Description
 This is a web application that helps developers plan out their day and keep track of their various tasks. The dev planner helps you keep track of your tasks and deadlines.Starting a bootcamp can be overwhelming,the dev planner has resources that can help you get started in your journey as a developer.
 

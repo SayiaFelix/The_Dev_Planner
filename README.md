@@ -1,7 +1,7 @@
 # The_Dev_Planner
 
 #### By 
-* (https://github.com/SayiaFelix/)
+* [Sayia Felix](https://github.com/SayiaFelix/)
 * Gamaliel Sirengo  
 * Caren Chepkorir 
 * Christine Nkatha

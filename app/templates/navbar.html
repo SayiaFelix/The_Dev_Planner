@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <a class="navbar-brand fs-1 fw-bold" href="/">Dev Planner</a>
+<nav class="navbar navbar-expand-lg navbar-primary fixed-top navbar bg-light">
+    <a class="navbar-brand fs-1 fw-bold" href="/"> <img src="{{url_for('static', filename='assets/logo.png')}}" height="45" width="230" alt="Dev Planner Logo" loading="lazy" style="margin-top: 1px" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -8,33 +8,25 @@
                 <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
             </li>
             <li>
-                <a class="nav-link" href="#about">About</a>
-            </li>
-            <li>
                 <a class="nav-link" href="{{ url_for('main.dashboard') }}">Dashboard</a>
             </li>
-            <!-- <li>
-                <a class="nav-link" href="/subscribe">Subscribe</a>
-            </li> -->
-
         </ul>
-        <ul class="nav navbar-nav navbar-right fs-3 fw-bold">
+        <ul class="nav navbar-nav navbar-right fs-4">
             {% if current_user.is_authenticated %} {% if current_user.is_admin %} {% else %} {% endif %}
             <li>
-                <a class="nav-link" href="{{url_for('main.profile',uname=current_user.author)}}">Profile</a>
+                <a class="nav-link" href="{{url_for('main.profile',uname=current_user.author)}}">PROFILE</a>
             </li>
             <li>
-                <a class="nav-link" href="/subscribe">Subscribe</a>
+                <a class="nav-link" href="/subscribe">SUBSCRIBE</a>
             </li>
             <li>
-                <a class="nav-link" href="{{url_for('auth.logout')}}">Logout</a>
+                <a class="nav-link" href="{{url_for('auth.logout')}}">LOGOUT</a>
             </li>
             {% else %}
             <li>
-                <a class="nav-link" href="{{url_for('auth.login')}}">Login</a>
+                <a class="nav-link" href="{{url_for('auth.login')}}">LOGIN</a>
             </li>
             {%endif%}
         </ul>
-
     </div>
 </nav>

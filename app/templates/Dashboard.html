@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <hr>
     <div class="backg">
         <div class="container-fluid mainArea ">
             <div class="row">
@@ -23,7 +24,7 @@
                 <div class="col-md-3 text-center  ">
                     <div class="col container area1 mt-4 ">
                         <div class="row "><img class="img-fluid m-4 " src="{{url_for('static', filename='assets/logo.png')}}" alt="" style="height: 100%; width:85%;"></div>
-                        <div class="row mt-3 profile"><img class="img-fluid user1 rounded-circle" src="{{url_for('static', filename='assets/user.png')}}" alt=""></div>
+                        <div class="row mt-3 profile"><img class="img-fluid user1 rounded-circle" src="{{url_for('static', filename='assets/user.jpg')}}" alt=""></div>
 
                         <div class="row">
                             <h5 class="text-center fw-bold mt-2">Joyce Njoroge</h5>
@@ -611,16 +612,6 @@
                         <!-- Weekly tasks section ends here -->
 
 
-
-
-
-
-
-
-
-
-
-
                         <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel" aria-labelledby="v-tabs-messages-tab">
                             <div class="row">
                                 <h2 class=" mt-4">Developer Resources </h2>
@@ -755,10 +746,13 @@
                                 <div class="col-md-2">
                                     <div class="card ">
                                         <div class="card-body">
-                                            <h5 class="card-title">
-                                                <i class="fa-solid fa-user-secret"></i>
-                                            </h5>
-                                            <p class="card-text ">Subscribe</p>
+                                            <a href="/subscribe">
+                                                <h5 class="card-title">
+                                                    <i class="fa-solid fa-user-secret"></i>
+                                                </h5>
+                                                <p class="card-text">
+                                                    Subscribe</p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

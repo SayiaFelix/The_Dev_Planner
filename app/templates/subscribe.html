@@ -1,8 +1,14 @@
 {% extends 'base.html'%} {% import "bootstrap/wtf.html" as wtf %} {% block content %}
-<div class="container">
-    <div style="width: 80%; height:55%">
-        <h1 class="">Subscibe to <strong>The Dev Planner Hub</strong> ::</h1>
-        <br> {{ wtf.quick_form(subscriber_form) }}
+<br><br><br>
+<hr>
+
+<body style="background-color: #FEFEFE;">
+    <div class="container-fluid" style="background-image: url('static/photos/Apage-bgsded.jpg')">
+        <div style=" width: 80%; height:60% ">
+            <h1 class=" ">Subscibe to <strong>The Dev Planner</strong></h1>
+            <br> {{ wtf.quick_form(subscriber_form) }}
+        </div>
     </div>
-</div>
+</body>
+
 <hr> {% endblock %}

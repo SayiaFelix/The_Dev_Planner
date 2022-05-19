@@ -4,7 +4,7 @@ class Config:
     SECRET_KEY=os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:jay@localhost/planner'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
-
+    SQLALCHEMY_DATABASE_URI = 'postgres://clgzejipippsdw:3c38c25961098576c1b5613e6b2a13346d36ce83ca755958f4a0a313c5ce9c8b@ec2-54-204-56-171.compute-1.amazonaws.com:5432/d3naead9r38pe4'
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
@@ -21,13 +21,13 @@ class Config:
         pass
 
 class ProdConfig(Config):
-    #  uri = os.getenv("DATABASE_URL")  
-    #  if uri.startswith("postgres://"):
-    #     uri = uri.replace("postgres://", "postgresql://", 1)
+     uri = os.getenv("DATABASE_URL")  
+     if uri.startswith("postgres://"):
+        uri = uri.replace("postgres://", "postgresql://", 1)
 
-    #     SQLALCHEMY_DATABASE_URI=uri
+        SQLALCHEMY_DATABASE_URI=uri
   
-  pass
+  
 class TestConfig(Config):
       SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:jay@localhost/devhub_test'
   

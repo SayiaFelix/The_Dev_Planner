@@ -10,14 +10,23 @@
 .backg{
     height: 100vh;
     width: 100vw;
-    background-color: #eae1d4;
+    /* background-color: #eae1d4; */
+    background: linear-gradient(135deg, #00c3ff, #eeef1c);
+    background: linear-gradient(135deg, #fc00ff, #00dbde);
+    background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
+    background-image: linear-gradient(150deg, #5a00ff 0%, #ff1ff7 100%, #ff1ff7 100%);
+    
 }
 .mainArea{
     height: 96vh;
     width: 96vw;
     background-color: #ffffff;
     border-radius: 30px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 .user1{
     height: 50%;
@@ -48,6 +57,13 @@
 
 .card{
     border-radius: 10px;
+    /* background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px; */
+    cursor: pointer;
+    
     
 }
 .card:hover{

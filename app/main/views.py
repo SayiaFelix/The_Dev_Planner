@@ -35,7 +35,7 @@ def profile(uname):
         abort(404)
 
     return render_template("profile/profile.html", user = user)
-
+    
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
 def update_profile(uname):
@@ -55,6 +55,7 @@ def update_profile(uname):
 
     return render_template('profile/update.html',form =form)
 
+
 @main.route('/user/<uname>/update/pic',methods= ['POST'])
 @login_required
 def update_pic(uname):
@@ -65,6 +66,14 @@ def update_pic(uname):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
+
+@main.route('/task/<int:id>')
+def daily_task_(id):
+
+    task = Task.query.get(id)
+
+    return render_template('task.html',task=task)
+
 
 @main.route('/subscribe', methods=['GET','POST'])
 def subscriber():

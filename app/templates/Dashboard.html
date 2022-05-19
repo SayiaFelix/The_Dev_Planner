@@ -711,19 +711,19 @@
                                 <h3><i class="fa-solid fa-gear"></i> Settings</h3>
                             </div>
                             <div class="row mt-4 text-center">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <a href="{{url_for('main.profile',uname=current_user.author)}}">
                                         <div class="card ">
                                             <div class="card-body">
                                                 <h5 class="card-title">
                                                     <i class="fa-solid fa-user-secret"></i>
                                                 </h5>
-                                                <p class="card-text ">Update Account</p>
+                                                <p class="card-text ">Account</p>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-md-2">
+                                <!-- <div class="col-md-2">
                                     <div class="card ">
                                         <div class="card-body">
                                             <h5 class="card-title">
@@ -732,8 +732,8 @@
                                             <p class="card-text ">Reset Pass</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-2">
+                                </div> -->
+                                <div class="col-md-3">
                                     <div class="card ">
                                         <div class="card-body">
                                             <h5 class="card-title">
@@ -743,7 +743,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="card ">
                                         <div class="card-body">
                                             <a href="/subscribe">
@@ -756,17 +756,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="card ">
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                <i class="fa-solid fa-user-secret"></i>
-                                            </h5>
-                                            <p class="card-text ">Reset Pass</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
+
+                                <div class="col-md-3">
                                     <a href="{{url_for('auth.logout')}}">
                                         <div class="card ">
                                             <div class="card-body">
@@ -932,7 +923,18 @@
             </div>
         </div>
     </div>
+    <hr>
 
+    <footer style="background-color: #FAF5EF;">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-8 col-md-10 mx-auto ">
+                    <p class="copyright text-center m-2 medium text-dark ">Copyright &copy; The Dev Planner @2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <hr>
 
 
 

@@ -16,8 +16,9 @@ class User(UserMixin,db.Model):
     password_hash = db.Column(db.String(255))
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
- 
-#linking tables 
+    task = db.relationship('Task', backref='author', lazy='dynamic')
+    WeeklyTask = db.relationship('WeeklyTask', backref='author', lazy='dynamic')
+
     @property
     def password(self):
         raise AttributeError('You cannnot read the password attribute')
@@ -31,6 +32,53 @@ class User(UserMixin,db.Model):
 
     def __repr__(self):
         return f"{self.author}"
+
+
+class Task(db.Model):
+    __tablename__= 'task'
+    id = db.Column(db.Integer,primary_key = True)
+    name = db.Column(db.String(255))
+    description = db.Column(db.Text)
+    date = db.Column(db.DateTime(250), default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
+
+    def save_blog(self,task):
+        db.session.add(task)
+        db.session.commit()
+
+    @classmethod
+    def get_tasks(id):
+        task = task.query.filter_by(name= name).all()
+        return task
+
+    def __repr__(self):
+        return f"Task :: {self.id}',{self.name}',{self.description}','{self.date}')"
+
+  
+class WeeklyTask(db.Model):
+    __tablename__= 'wtask'
+    id = db.Column(db.Integer,primary_key = True)
+    name = db.Column(db.String(255))
+    description = db.Column(db.Text)
+    date = db.Column(db.DateTime(250), default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+  
+
+    def save_blog(self,task):
+        db.session.add(task)
+        db.session.commit()
+
+    @classmethod
+    def get_tasks(id):
+        task = task.query.filter_by(name = name).all()
+        return task
+
+    def __repr__(self):
+        return f"Weekly Task :: {self.id}',{self.name}',{self.description}','{self.date}')"
+
+
+
 
 class Subscriber(UserMixin, db.Model):
    __tablename__="subscribers"
